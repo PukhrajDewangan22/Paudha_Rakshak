@@ -62,7 +62,7 @@ Paudha-Rakshak/
 ```bash
 git clone https://github.com/yourusername/Paudha-Rakshak.git
 cd Paudha-Rakshak
-````
+```
 
 2. **Create and Activate Virtual Environment**
 
