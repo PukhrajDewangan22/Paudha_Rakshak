@@ -3,22 +3,22 @@
 
 **Paudha Rakshak** is a responsive web-based application built using **Flask** and **Machine Learning** to detect plant diseases from images. Users can **upload plant leaf images** or **capture photos using the device’s rear camera**. Based on the image, the app detects the disease and provides:
 
-- 🌱 Disease name
-- 💊 Precautionary measures
-- 🌾 Recommended fertilizers and supplements
+- 🌱 Disease name  
+- 💊 Precautionary measures  
+- 🌾 Recommended fertilizers and supplements  
 
-Additionally, the platform allows users to **borrow essential gardening equipment**, including **fertilizers, supplements, and other plant-care tools**, making it a comprehensive tool for plant care and disease prevention.
+Additionally, the platform allows users to **borrow essential gardening items**, such as **fertilizers, supplements, and other plant-care equipment**, making it a complete tool for plant health and management.
 
 ---
 
 ## 📸 Features
 
-- Detect plant diseases using machine learning
-- Upload or capture plant images through the browser
-- View detailed precautions and treatments
-- Responsive and mobile-friendly design
-- Borrow essential items like fertilizers and supplements
-- Powered by Flask, Pandas, and Pillow for fast and accurate results
+- Detect plant diseases using a trained ML model
+- Upload images or capture using the rear camera
+- Get precautions and treatment recommendations
+- Borrow plant essentials like fertilizers and supplements
+- Clean, responsive design for all screen sizes
+- Backend powered by Flask; image processing with Pillow; data lookup with Pandas
 
 ---
 
@@ -26,11 +26,12 @@ Additionally, the platform allows users to **borrow essential gardening equipmen
 
 - **Backend**: Python, Flask
 - **Frontend**: HTML, CSS, JavaScript
-- **Machine Learning**: scikit-learn / TensorFlow *(update if needed)*
+- **ML**: scikit-learn / TensorFlow *(update if needed)*
 - **Libraries Used**:
-  - `Pandas` – for handling disease and treatment data
-  - `Pillow` – for image processing
-  - `Flask` – web server and routing
+  - `Flask` – Web application framework
+  - `Pandas` – For data lookup and mapping
+  - `Pillow` – For image preprocessing
+  - `scikit-learn` – For model prediction
 
 ---
 
@@ -42,8 +43,8 @@ Paudha-Rakshak/
 │
 ├── static/                 # CSS, JavaScript files
 ├── templates/              # HTML files (Jinja templates)
-├── model/                  # Trained machine learning model
-├── uploads/                # Uploaded images
+├── model/                  # Trained ML model
+├── uploads/                # Uploaded plant images
 ├── app.py                  # Main Flask application
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
@@ -54,7 +55,7 @@ Paudha-Rakshak/
 
 ## 🧪 How to Access and Run the Project
 
-### 🔧 Installation Steps
+### 🔧 Installation & Setup Instructions
 
 1. **Clone the Repository**
 
@@ -75,15 +76,10 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-3. **Create `requirements.txt` File**
+3. **Add `requirements.txt` Manually**
 
-Run this command to generate it:
-
-```bash
-pip freeze > requirements.txt
-```
-
-Ensure it contains essential packages like:
+Create a file named `requirements.txt` inside your project folder (`Paudha-Rakshak/`)
+Copy and paste the following lines into the file:
 
 ```txt
 Flask
@@ -92,13 +88,9 @@ Pillow
 scikit-learn
 ```
 
-If not, install them:
+> ✅ *You can add more packages if your app uses them.*
 
-```bash
-pip install Flask pandas Pillow scikit-learn
-```
-
-4. **Install Required Packages**
+4. **Install Dependencies**
 
 ```bash
 pip install -r requirements.txt
@@ -110,40 +102,27 @@ pip install -r requirements.txt
 python app.py
 ```
 
-6. **Open in Browser**
+6. **Open the Application in Browser**
 
-Visit: `http://127.0.0.1:5000`
+Navigate to:
+👉 `http://127.0.0.1:5000`
 
 ---
 
 ## 🧾 Tasks Performed
 
-* Created a frontend with HTML, CSS, JavaScript
-* Integrated camera functionality for real-time image capture
-* Preprocessed plant images using Pillow
-* Used ML model to predict plant diseases
-* Displayed precautions and fertilizers using Pandas
-* Implemented option to borrow gardening essentials
+* Built user interface using HTML, CSS, and JavaScript
+* Integrated device rear-camera functionality
+* Used Pillow to handle uploaded and captured images
+* Applied a machine learning model to classify plant diseases
+* Used Pandas to fetch and display treatment and fertilizer info
+* Added feature to borrow essential plant care equipment
 
 ---
 
 ## ✅ Sample Output
 
-### 🔼 Upload or Capture Image
 
-![Upload Screen](https://via.placeholder.com/500x300?text=Upload+or+Capture+Image)
-
----
-
-### 🧠 Model Prediction Result
-
-```json
-{
-  "Disease": "Leaf Blight",
-  "Precaution": "Avoid overhead watering. Remove infected leaves.",
-  "Fertilizer": "Apply organic potassium-based fertilizer."
-}
-```
 
 ---
 
@@ -153,9 +132,10 @@ Visit: `http://127.0.0.1:5000`
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
-**Pukhraj Dewangan**
+* **Pukhraj Dewangan**
+* **Shasank Baxi**
 
 ---
 
@@ -164,7 +144,6 @@ Visit: `http://127.0.0.1:5000`
 This project is licensed under the **MIT License**.
 
 
-
 ---
 
-Let me know if you'd like a downloadable file version or GitHub formatting preview.
+Let me know if you'd like this as a `.md` file download or if you want to generate actual screenshots from your app!
