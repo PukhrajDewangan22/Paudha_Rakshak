@@ -68,5 +68,3 @@ If you have any queries related to this project, feel free to ask us anytime.
 ---
 
 
-
-```
