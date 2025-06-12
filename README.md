@@ -151,7 +151,3 @@ Navigate to:
 
 This project is licensed under the **MIT License**.
 
-
----
-
-Let me know if you'd like this as a `.md` file download or if you want to generate actual screenshots from your app!
