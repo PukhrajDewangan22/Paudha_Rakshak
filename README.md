@@ -70,7 +70,8 @@ cd Paudha-Rakshak
 # Windows
 python -m venv env
 env\Scripts\activate
-
+```
+```bash
 # macOS/Linux
 python3 -m venv env
 source env/bin/activate
