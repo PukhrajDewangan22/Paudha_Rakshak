@@ -127,8 +127,16 @@ Navigate to:
 ---
 
 ### 💻 Output Web Interface
-
-![Result Output](https://via.placeholder.com/500x300?text=Disease+Result+Displayed)
+### 🏠 Homepage
+![Result Output](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20(40).png)
+### 🔐 Login Page
+![Result Output](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20(45).png)
+### 🤖 Paudha Rakshak AI Engine
+![Result Output](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20(41).png)
+### 🌿 Paudha Essentials
+![Result Output](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20(42).png)
+### 📬 Get in Touch
+![Result Output](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20(44).png)
 
 ---
 
