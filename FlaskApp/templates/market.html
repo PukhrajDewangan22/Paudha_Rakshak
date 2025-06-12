@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Paudha Rakshak
+{% endblock pagetitle %}
+
+{% block body %}
+
+<style>
+    .supplement-section {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .glass-card {
+        background: linear-gradient(to right, #1b1b2f, #2d0058);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 1.2rem;
+        color: #fff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-card:hover {
+        transform: scale(1.01);
+        box-shadow: 0 10px 28px rgba(199, 140, 255, 0.45);
+        background: linear-gradient(to right, #320064, #4d0073);
+    }
+
+    .glass-card img {
+        margin: 12px 0;
+        width: 150px;
+        height: 190px;
+    }
+
+    .glass-card h5 {
+        font-size: 0.95rem;
+        font-weight: 550;
+        margin-bottom: 8px;
+    }
+
+    .glass-card h6 {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    .glass-card p {
+        font-size: 0.85rem;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+
+    .text-glow {
+        color: #c78cff;
+        text-shadow: 0 0 6px rgba(199, 140, 255, 0.5);
+    }
+
+    .row.p-3 .col {
+        margin-bottom: 25px;
+    }
+
+    @media (max-width: 768px) {
+        .glass-card {
+            padding: 1rem;
+        }
+
+        .glass-card img {
+            width: 130px;
+            height: 170px;
+        }
+
+        .glass-card h5 {
+            font-size: 0.9rem;
+        }
+
+        .glass-card h6 {
+            font-size: 0.85rem;
+        }
+
+        .glass-card p {
+            font-size: 0.8rem;
+        }
+    }
+</style>
+
+<div class="supplement-section">
+<div class="row text-center text-white" style="margin-bottom: 1rem; margin-top: -20px;">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="font-weight: 600; color: #c78cff; font-size: 1.8rem; margin-bottom: 0.3rem;">
+            <b>🛍️ Paudha Essentials 🛍️</b>
+        </h1>
+        <p class="lead" style="font-weight: 400; color: white; font-size: 0.95rem; margin-bottom: 0;">
+            Buy what your crops actually need, not just what’s sold
+        </p>
+    </div>
+</div>
+
+    <div class="row p-3">
+        {% for index in range(0,supplement_name | length) %}
+        {% if index != 4 %}
+        <div class="col">
+            <div class="glass-card h-100 text-center">
+                {% if index==3 or index==5 or index==7 or index==11 or index==15 or index==18 or index==20 or
+                index==23 or index==24 or index==25 or index==28 or index==38 or index==40 or index==42 %}
+                <h5>Fertilizer<b style="color: yellow;"> (Healthy)</b></h5>
+                {% else %}
+                <h5>Supplements<b style="color: rgb(255, 185, 185);"> (Diseased)</b></h5>
+                {% endif %}
+
+                <img src={{supplement_image[index]}} style="border-radius: 12px;">
+
+                <h6 style="color: white;">For {{disease[index]}}</h6>
+                <p style="color: white;">{{supplement_name[index]}}</p>
+
+                <a target="_blank" href={{buy[index]}}>
+                    <button type="button" class="btn btn-success" style="background-color: #2d0058; font-weight: 500; font-size: 0.85rem;">Buy Product</button>
+                </a>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock body %}

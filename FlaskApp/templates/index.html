@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Paudha Rakshak
+{% endblock pagetitle %}
+
+{% block body %}
+<style>
+    .submit-btn {
+        background: linear-gradient(to right, rgb(147, 106, 185), #a64dff);
+        color: white;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        padding: 12px 26px;
+        font-size: 1rem;
+        border-radius: 30px;
+        font-weight: 500;
+    }
+
+    .submit-btn:hover {
+        background: linear-gradient(to right, #a64dff, #7e2dfc);
+        transform: scale(1.05);
+        box-shadow: 0 0 12px rgba(199, 140, 255, 0.5);
+    }
+
+    .raksha-btn {
+        background-color: rgb(189, 122, 252);
+        color: #2d0058;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    .raksha-btn:hover {
+        background-color: #a64dff;
+        color: white;
+        transform: scale(1.05);
+    }
+
+    .rounded-pill {
+        border-radius: 50% !important;
+    }
+
+    .glass-bg {
+        background: linear-gradient(to right, #d1b3ff, #c78cff);
+    }
+
+    h1.display-4 {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    h5 {
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    p, li {
+        font-size: 0.9rem;
+    }
+
+    .lead {
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+        h1.display-4 {
+            font-size: 1.4rem;
+        }
+
+        p, li {
+            font-size: 0.85rem;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="row mb-5 text-center text-white">
+        <div class="col-lg-10 mx-auto">
+            <h1 class="display-4" style="padding-top: 2%; color: #c78cff;">
+                <b>🍃 Meet Paudha Rakshak's AI Engine 🍃</b>
+            </h1>
+            <p class="lead" style="color: white;">
+                Instantly scan and detect plant diseases with the power of AI — so you can protect crops before it’s too late.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col-lg-4">
+            <div class="p-4 shadow rounded-lg" style="background: linear-gradient(to right, #1b1b2f, #2d0058); height: 100%;">
+                <h4 style="color: white;">Why is Plant Disease Detection Important?</h4>
+                <p style="color: white;">
+                    Plant diseases can severely affect crop growth, yield, and overall plant health. If not identified early, they may spread quickly, leading to significant agricultural losses.
+                    <br><br>
+                    Accurate diagnosis is a critical first step in managing plant diseases. Without correctly identifying the disease and its cause, any treatment may be ineffective.
+                    <br><br>
+                    With modern AI-powered tools like <strong>Paudha Rakshak</strong>, early detection becomes faster and more reliable—even before visible symptoms appear.
+                </p>
+            </div>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="col-lg-4">
+            <div class="p-4 shadow rounded-lg glass-bg" style="height: 100%;">
+                <img src="https://pnghq.com/wp-content/uploads/download-hd-tropical-plant-png-image-nicepng-41215.png" height="240" width="180" class="d-block mx-auto mb-3 rounded-pill">
+
+                <form action="/submit" method="POST" enctype="multipart/form-data">
+                    <div class="custom-file mb-3">
+                        <input type="file" id="actual-btn" hidden name="image" />
+                        <label for="actual-btn">Choose File</label>
+                        <label id="camera-btn" style="cursor: pointer;">Open Camera</label><br>
+                        <span id="file-chosen">No file chosen</span>
+                    </div>
+
+                    <div id="camera-container" style="display: none;">
+                        <video id="camera-feed" width="300" height="220" autoplay></video>
+                        <button type="button" id="capture-btn" class="btn btn-sm btn-dark mt-2">Capture Photo</button>
+                    </div>
+
+                    <img id="preview" src="#" alt="Camera Photo Preview" style="display: none; max-width: 100%;" />
+
+                    <h5 class="text-center mb-3" style="color:rgb(57, 56, 59);">Upload a leaf photo. Let AI reveal the disease</h5>
+
+                    <center>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-4">
+            <div class="p-4 shadow rounded-lg" style="background: linear-gradient(to right, #1b1b2f, #2d0058); height: 100%;">
+                <h4 style="color: white;">Partner with AI to Protect Your Plants:</h4>
+                <ol style="color: white;">
+                    <li>Sanitize tools & pots regularly.</li>
+                    <li>Inspect new plants before planting.</li>
+                    <li>Plant only in warm, ready soil.</li>
+                    <li>Ensure airflow by trimming leaves.</li>
+                    <li>Rotate crops to avoid soil fatigue.</li>
+                    <li>Remove infected parts early.</li>
+                    <li>Avoid overwatering and soggy soil.</li>
+                </ol>
+                <a target="_blank" href="https://www.thespruce.com/prevent-plant-diseases-in-your-garden-2539511">
+                    <button type="button" class="raksha-btn btn btn-sm mt-3">Raksha Tips</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const actualBtn = document.getElementById('actual-btn');
+    const captureBtn = document.getElementById('capture-btn');
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name;
+    });
+
+    document.getElementById('camera-btn').addEventListener('click', function () {
+        document.getElementById('camera-container').style.display = 'block';
+        startCamera();
+    });
+
+    function startCamera() {
+        const video = document.getElementById('camera-feed');
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => video.srcObject = stream)
+            .catch(err => console.error('Error accessing camera:', err));
+    }
+
+    captureBtn.addEventListener('click', function () {
+        const video = document.getElementById('camera-feed');
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const dataUrl = canvas.toDataURL('image/jpeg');
+
+        const imageBlob = dataURItoBlob(dataUrl);
+        const capturedFile = new File([imageBlob], "captured.jpg", { type: 'image/jpeg' });
+
+        const dt = new DataTransfer();
+        dt.items.add(capturedFile);
+        actualBtn.files = dt.files;
+
+        document.getElementById('preview').src = dataUrl;
+        document.getElementById('preview').style.display = 'block';
+        fileChosen.textContent = capturedFile.name;
+    });
+
+    function dataURItoBlob(dataURI) {
+        const byteString = atob(dataURI.split(',')[1]);
+        const ab = new ArrayBuffer(byteString.length);
+        const ia = new Uint8Array(ab);
+        for (let i = 0; i < byteString.length; i++) {
+            ia[i] = byteString.charCodeAt(i);
+        }
+        return new Blob([ia], { type: 'image/jpeg' });
+    }
+</script>
+
+{% endblock body %}

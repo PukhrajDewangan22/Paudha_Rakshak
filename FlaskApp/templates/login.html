@@ -1,0 +1,62 @@
+﻿{% extends 'base.html' %}
+{% block pagetitle %}
+Login | Paudha Rakshak
+{% endblock pagetitle %}
+
+{% block body %}
+<style>
+    .login-container {
+        max-width: 400px;
+        margin: 80px auto;
+        background: linear-gradient(to right, #c78cff, #a64dff);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        color: white;
+    }
+
+    .login-title {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border: none;
+        padding: 12px 15px;
+    }
+
+    .login-btn {
+        background: linear-gradient(to right, #a64dff, #7e2dfc);
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 30px;
+        width: 100%;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .login-btn:hover {
+        background: linear-gradient(to right, #7e2dfc, #4d0073);
+        transform: scale(1.03);
+        box-shadow: 0 0 10px rgba(199, 140, 255, 0.6);
+    }
+</style>
+
+<div class="login-container">
+    <h2 class="login-title">Welcome Back</h2>
+    <form action="/login" method="POST">
+        <div class="mb-3">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn login-btn">Login</button>
+    </form>
+</div>
+{% endblock body %}

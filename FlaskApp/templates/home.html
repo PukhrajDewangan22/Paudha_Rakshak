@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Paudha Rakshak 
+{% endblock pagetitle %}
+
+{% block body %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<style>
+<style>
+  body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 60px 40px 60px;
+    gap: 30px;
+  }
+
+  .left {
+    max-width: 50%;
+    opacity: 0;
+  }
+
+  .left h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    background: linear-gradient(to right, rgb(228, 184, 230), rgb(138, 107, 218));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .left p {
+    font-size: 1rem;
+    margin-top: 18px;
+    line-height: 1.6;
+    color: #d1d1d1;
+  }
+
+  .cta {
+    margin-top: 30px;
+  }
+
+  .cta a {
+    padding: 12px 25px;
+    background: linear-gradient(to right, #a64dff, #9145ff);
+    color: white;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(147, 106, 185, 0.3);
+    transition: all 0.4s ease;
+  }
+
+  .cta a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(147, 106, 185, 0.6);
+  }
+
+  .right {
+    width: 45%;
+    max-height: 380px;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(147, 106, 185, 0.25);
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+
+  .magic-box {
+    margin: 70px 60px 40px 60px;
+    padding: 5px;
+    background: #111;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(147, 106, 185, 0.25);
+    opacity: 0;
+  }
+
+  .magic-box h2 {
+    font-size: 1.6rem;
+    background: linear-gradient(to right, rgb(147, 106, 185), #a64dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+  }
+
+  .magic-box p {
+    font-size: 0.95rem;
+    color: #cfcfcf;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 30px;
+    }
+
+    .left,
+    .right {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .left h1 {
+      font-size: 2.2rem;
+    }
+
+    .magic-box h2 {
+      font-size: 1.4rem;
+    }
+
+    .magic-box p {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+</style>
+
+<div class="container">
+  <div class="left">
+    <h1>Plant Smarter, Not Harder 🌿</h1>
+    <p>Welcome to <strong>Paudha Rakshak</strong> – your AI-powered plant guardian. Detect diseases early, get real-time treatment suggestions, and unlock healthier yields. Revolutionize your farming journey with just one click.</p>
+    <div class="cta">
+      <a href="/index">🌱 Start Diagnosis</a>
+    </div>
+  </div>
+  <div class="right">
+    <img src="{{ url_for('static', filename='image1.jpg') }}" alt="Smart Crop Health">
+
+  </div>
+</div>
+
+<div class="magic-box">
+  <h2>🔍 Real-Time Insight Engine</h2>
+  <p>Our system analyzes leaf patterns, spots, and discoloration using AI vision models. With Paudha Rakshak, you get personalized tips to treat and prevent plant diseases—before they spread.</p>
+</div>
+
+<script>
+  gsap.to(".left", {
+    duration: 1.2,
+    x: 0,
+    opacity: 1,
+    delay: 0.3,
+    ease: "power3.out"
+  });
+
+  gsap.to(".right", {
+    duration: 1.2,
+    x: 0,
+    opacity: 1,
+    delay: 0.5,
+    ease: "power3.out"
+  });
+
+  gsap.to(".magic-box", {
+    duration: 1.5,
+    y: 0,
+    opacity: 1,
+    delay: 0.8,
+    ease: "power2.out"
+  });
+</script>
+{% endblock body %}

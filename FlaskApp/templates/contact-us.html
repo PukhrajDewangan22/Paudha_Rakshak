@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Paudha Rakshak
+{% endblock pagetitle %}
+
+{% block body %}
+
+<style>
+    .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        background: linear-gradient(to right, #1b1b2f, #2d0058);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 1.5rem;
+        color: #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease-in-out;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.85rem;
+    }
+
+    .glass-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 32px rgba(199, 140, 255, 0.5);
+    }
+
+    .social-icon {
+        margin-right: 8px;
+        transition: 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .text-glow {
+        color: #c78cff;
+        text-shadow: 0 0 8px rgba(199, 140, 255, 0.6);
+    }
+
+    h1.display-4 {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    p.lead {
+        font-size: 0.92rem;
+        font-weight: 400;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    h6 {
+        font-size: 0.95rem;
+    }
+
+    .cta-text {
+        margin-top: 2.5rem;
+        font-style: italic;
+        text-align: center;
+        color: #c78cff;
+        font-size: 1rem;
+    }
+
+    .tagline {
+        margin-top: 2rem;
+        text-align: center;
+        color: #d1b3ff;
+        font-size: 0.95rem;
+    }
+</style>
+
+<div class="row mb-4 text-center text-white">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 1%;"><b class="text-glow">📞 Get in Touch 📞</b></h1>
+        <p class="lead">We’re here to help — whether it’s a bug, feedback, or just to say hi!</p>
+    </div>
+</div>
+
+<div class="row p-2">
+    <!-- Pukhraj Card -->
+    <div class="col-md-6 mb-3">
+        <div class="glass-card h-100">
+            <h4 class="text-glow">Pukhraj Dewangan</h4>
+            <p class="lead">
+                🌿 Hi, I’m Pukhraj, a B.Tech CSE student passionate about using AI to support farmers through Paudha Rakshak. I develop Flask-based solutions with an emphasis on clean design and responsiveness, making it simple and easy for anyone to use—helping farmers prevent losses by detecting crop diseases early.
+            </p>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <h6>Social Media:</h6><br>
+
+            <a href="mailto:pukhrajdewangan227@gmail.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png" height="28" class="social-icon">
+            </a> pukhrajdewangan227@gmail.com <br><br>
+
+            <a href="https://www.linkedin.com/in/pukhrajdewangan/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png" height="28" class="social-icon">
+            </a> Pukhraj Dewangan<br><br>
+
+            <a href="https://github.com/PukhrajDewangan22" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/6424/6424084.png" height="28" class="social-icon">
+            </a> PukhrajDewangan22<br><br>
+
+            <a href="https://www.instagram.com/_pukhraj_27/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/6422/6422200.png" height="28" class="social-icon">
+            </a> @_pukhraj_27
+        </div>
+    </div>
+
+    <!-- Shashank Card -->
+    <div class="col-md-6 mb-3">
+        <div class="glass-card h-100">
+            <h4 class="text-glow">Shashank Baxi</h4>
+            <p class="lead">
+                🚀I’m Shashank, a tech explorer skilled in full-stack development and AI. I help advance Paudha Rakshak by testing real data and images to ensure it works well. I’ve verified it with live images, making it easy for farmers to detect diseases quickly and accurately.
+
+
+            </p>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <h6>Social Media:</h6><br>
+
+            <a href="mailto:shashankbaxi1@gmail.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png" height="28" class="social-icon">
+            </a> shashankbaxi1@gmail.com <br><br>
+
+            <a href="https://www.linkedin.com/in/shashankbaxi16/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png" height="28" class="social-icon">
+            </a> Shashank Baxi<br><br>
+
+            <a href="https://github.com/shashankbaxi" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/6424/6424084.png" height="28" class="social-icon">
+            </a> shashankbaxi<br><br>
+
+            <a href="https://www.instagram.com/mr.shashank_25" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/6422/6422200.png" height="28" class="social-icon">
+            </a> @mr.shashank_25
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action Text -->
+<div class="cta-text">
+    <p>💬 Have a question, suggestion, or collaboration idea?<br>
+        Drop us a message — we’d love to hear from you!</p>
+</div>
+
+<!-- Tagline -->
+<div class="tagline">
+    <p><strong>🌱 PaudhA Rakshak – Safeguarding the Green, One Leaf at a Time.</strong></p>
+</div>
+
+{% endblock body %}
