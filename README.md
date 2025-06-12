@@ -1,5 +1,5 @@
 
-# 🌿 Paudha Rakshak
+# 🌿 Paudha Rakshak– Plant Disease Detection Using AI
 
 **Paudha Rakshak** is a responsive web-based application built using **Flask** and **Machine Learning** to detect plant diseases from images. Users can **upload plant leaf images** or **capture photos using the device’s rear camera**. Based on the image, the app detects the disease and provides:
 
