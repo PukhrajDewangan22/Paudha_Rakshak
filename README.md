@@ -68,12 +68,12 @@ cd Paudha-Rakshak
 
 ```bash
 # Windows
-python -m venv venv
-venv\Scripts\activate
+python -m venv env
+env\Scripts\activate
 
 # macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv env
+source env/bin/activate
 ```
 
 3. **Add `requirements.txt` Manually**
