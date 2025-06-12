@@ -65,14 +65,15 @@ cd Paudha-Rakshak
 ```
 
 2. **Create and Activate Virtual Environment**
-
-```bash
 # Windows
+```bash
+
 python -m venv env
 env\Scripts\activate
 ```
-```bash
 # macOS/Linux
+```bash
+
 python3 -m venv env
 source env/bin/activate
 ```
