@@ -26,7 +26,7 @@ Additionally, the platform allows users to **borrow essential gardening items**,
 
 - **Backend**: Python, Flask
 - **Frontend**: HTML, CSS, JavaScript
-- **ML**: scikit-learn / TensorFlow *(update if needed)*
+- **ML**: scikit-learn / TensorFlow 
 - **Libraries Used**:
   - `Flask` – Web application framework
   - `Pandas` – For data lookup and mapping
