@@ -58,30 +58,30 @@ Paudha-Rakshak/
 ### 🔧 Installation & Setup Instructions
 
 1. **Clone the Repository**
-
 ```bash
 git clone https://github.com/yourusername/Paudha-Rakshak.git
 cd Paudha-Rakshak
-```
+````
 
 2. **Create and Activate Virtual Environment**
-# Windows
-```bash
 
+* **Windows**
+
+```bash
 python -m venv env
 env\Scripts\activate
 ```
-# macOS/Linux
-```bash
 
+* **macOS/Linux**
+
+```bash
 python3 -m venv env
 source env/bin/activate
 ```
 
 3. **Add `requirements.txt` Manually**
 
-Create a file named `requirements.txt` inside your project folder (`Paudha-Rakshak/`)
-Copy and paste the following lines into the file:
+Create a file named `requirements.txt` inside your project folder (`Paudha-Rakshak/`) and copy the following:
 
 ```txt
 Flask
@@ -90,7 +90,7 @@ Pillow
 scikit-learn
 ```
 
-> ✅ *You can add more packages if your app uses them.*
+> ✅ *Add any other packages you use in your app.*
 
 4. **Install Dependencies**
 
@@ -98,13 +98,21 @@ scikit-learn
 pip install -r requirements.txt
 ```
 
-5. **Run the Flask App**
+5. **File Setup**
+
+
+* Go to the `Flask Deployed App` folder.
+* Download the pre-trained model file [`plant_disease_model_1.pt`](https://drive.google.com/drive/folders/1ewJWAiduGuld_9oGSrTuLumg9y62qS6A).
+* Place the downloaded file inside the `Flask Deployed App` directory.
+
+
+6. **Run the Flask App**
 
 ```bash
 python app.py
 ```
 
-6. **Open the Application in Browser**
+7. **Open the Application in Browser**
 
 Navigate to:
 👉 `http://127.0.0.1:5000`
@@ -124,21 +132,29 @@ Navigate to:
 
 ## ✅ Sample Output
 
-
-
 ---
 
 ### 💻 Output Web Interface
-### 🏠 Homepage
-![Result Output](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20(40).png)
-### 🔐 Login Page
-![Result Output](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20(45).png)
-### 🤖 Paudha Rakshak AI Engine
-![Result Output](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20(41).png)
-### 🌿 Paudha Essentials
-![Result Output](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20(42).png)
-### 📬 Get in Touch
-![Result Output](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20(44).png)
+
+#### 🏠 Homepage
+
+![Homepage](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20\(40\).png)
+
+#### 🔐 Login Page
+
+![Login Page](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20\(45\).png)
+
+#### 🤖 Paudha Rakshak AI Engine
+
+![AI Engine](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20\(41\).png)
+
+#### 🌿 Paudha Essentials
+
+![Paudha Essentials](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20\(42\).png)
+
+#### 📬 Get in Touch
+
+![Get in Touch](https://github.com/PukhrajDewangan22/Paudha_Rakshak/blob/main/output_images/Screenshot%20\(44\).png)
 
 ---
 
@@ -152,4 +168,5 @@ Navigate to:
 ## 📃 License
 
 This project is licensed under the **MIT License**.
+
 
