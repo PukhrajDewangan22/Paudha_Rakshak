@@ -101,9 +101,9 @@ pip install -r requirements.txt
 5. **File Setup**
 
 
-* Go to the `Flask Deployed App` folder.
+* Go to the `FlaskApp` folder.
 * Download the pre-trained model file [`plant_disease_model_1.pt`](https://drive.google.com/drive/folders/1ewJWAiduGuld_9oGSrTuLumg9y62qS6A).
-* Place the downloaded file inside the `Flask Deployed App` directory.
+* Place the downloaded file inside the `FlaskApp` directory.
 
 
 6. **Run the Flask App**
